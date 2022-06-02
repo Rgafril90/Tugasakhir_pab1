@@ -27,7 +27,16 @@
             style="@style/TextAppearance.AppCompat.Large"/>
 
         <TextView
-            android:id="@+id/tv_tentang_Karaoke"
+            android:id="@+id/tv_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tempat"
+            android:padding="6dp"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/tv_detail_Karaoke"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Detail Tempat Karaoke"
@@ -35,6 +44,16 @@
             style="@style/TextAppearance.AppCompat.Medium"
             android:justificationMode="inter_word"/>
 
+        <TextView
+            android:id="@+id/tv_telp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Telepon"
+            android:padding="6dp"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:justificationMode="inter_word"/>
+
+        //Button
         <Button
             android:id="@+id/btn_telepon"
             android:layout_width="match_parent"

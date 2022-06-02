@@ -18,6 +18,15 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder
 
     public AdapterCard(ArrayList<ModelKaraoke> datakaraoke) {this.datakaraoke = datakaraoke; }
 
+    public interface OnItemClickCallBack{
+        void onItemClicked(ModelKaraoke data);
+    }
+
+    private AdapterGrid.OnItemClickCallBack callBack;
+    public void setOnItemClickCallBack(AdapterGrid.OnItemClickCallBack callBack) {
+        this.callBack = callBack;
+    }
+
     @NonNull
     @Override
     public CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -30,12 +39,21 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder
     ModelKaraoke karaoke = datakaraoke.get(position);
 
     holder.tvnamakaraoke.setText(karaoke.getNama());
+    holder.tvtempat.setText(karaoke.getTempat());
     holder.tvdetailkaraoke.setText(karaoke.getDetail());
+    holder.tvtelp.setText(karaoke.getNoTelp());
 
     Glide
             .with(holder.itemView.getContext())
             .load(karaoke.getFoto())
             .into(holder.ivfototempatkaraoke);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callBack.onItemClicked(datakaraoke.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -45,13 +63,15 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder
 
     public class CardViewHolder extends RecyclerView.ViewHolder {
         ImageView ivfototempatkaraoke;
-        TextView tvnamakaraoke, tvdetailkaraoke;
+        TextView tvnamakaraoke,tvtempat, tvdetailkaraoke, tvtelp;
 
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
             ivfototempatkaraoke = itemView.findViewById(R.id.iv_foto_karaoke);
             tvnamakaraoke = itemView.findViewById(R.id.tv_nama_tempat_karaoke);
             tvdetailkaraoke = itemView.findViewById(R.id.tv_tentang_Karaoke);
+            tvtempat = itemView.findViewById(R.id.tv_tempat);
+            tvtelp = itemView.findViewById(R.id.tv_telp);
 
         }
 

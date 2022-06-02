@@ -28,11 +28,35 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/tv_tentang_Karaoke"
+            android:id="@+id/tv_tempat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/iv_foto_karaoke"
             android:layout_below="@+id/tv_nama_tempat_karaoke"
+            android:layout_marginLeft="6dp"
+            android:text="Tempat"
+            android:justificationMode="inter_word"
+            android:maxLines="4"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_tentang_Karaoke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_foto_karaoke"
+            android:layout_below="@+id/tv_tempat"
+            android:layout_marginLeft="6dp"
+            android:text="Tentang Karaoke"
+            android:justificationMode="inter_word"
+            android:maxLines="4"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_telp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_foto_karaoke"
+            android:layout_below="@+id/tv_tentang_Karaoke"
             android:layout_marginLeft="6dp"
             android:text="Tentang Karaoke"
             android:justificationMode="inter_word"
