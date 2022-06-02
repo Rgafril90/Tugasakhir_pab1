@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="6dp"
     android:elevation="6dp">
 
@@ -11,7 +11,7 @@
         android:padding="6dp">
 
         <ImageView
-            android:id="@+id/iv_tempat_karaoke"
+            android:id="@+id/iv_foto_karaoke"
             android:layout_width="75dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
@@ -21,7 +21,7 @@
             android:id="@+id/tv_nama_tempat_karaoke"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/iv_tempat_karaoke"
+            android:layout_toRightOf="@+id/iv_foto_karaoke"
             android:layout_marginLeft="6dp"
             android:text="Nama Tempat Karaoke"
             android:textSize="21sp"
@@ -31,7 +31,7 @@
             android:id="@+id/tv_tentang_Karaoke"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/iv_tempat_karaoke"
+            android:layout_toRightOf="@+id/iv_foto_karaoke"
             android:layout_below="@+id/tv_nama_tempat_karaoke"
             android:layout_marginLeft="6dp"
             android:text="Tentang Karaoke"
