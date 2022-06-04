@@ -13,9 +13,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 public class DetailActivity extends AppCompatActivity {
-    private TextView tvnama,tvtempat,tvdetail,tvnotelp;
+    private TextView tvnama,tvtempat,tvdetail,tvtekstelp,tvnotelp;
     private ImageView ivfoto;
-    private String yNama,yTempat,yDetail,yNoTelp,yFoto;
+    private String yNama,yTempat,yDetail,yNotelp,yTeksTelp,yFoto;
 
     private Button btnBukaTelepon,btnBukaLokasi;
 
@@ -24,20 +24,21 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        //data Grid
         initView();
 
         Intent terima = getIntent();
         yNama = terima.getStringExtra("xNama");
         yTempat = terima.getStringExtra("xTempat");
         yDetail = terima.getStringExtra("xDetail");
-        yNoTelp = terima.getStringExtra("xNoTelp");
+        yTeksTelp = terima.getStringExtra("xTeksTelp");
+        yNotelp = terima.getStringExtra("xNoTelp");
         yFoto = terima.getStringExtra("xFoto");
 
         tvnama.setText(yNama);
         tvtempat.setText(yTempat);
         tvdetail.setText(yDetail);
-        tvnotelp.setText(yNoTelp);
+        tvtekstelp.setText(yTeksTelp);
+        tvnotelp.setText(yNotelp);
 
 
         Glide.with(DetailActivity.this)
@@ -55,6 +56,7 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
+        // BTN Telepon
         btnBukaTelepon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +72,8 @@ public class DetailActivity extends AppCompatActivity {
         tvnama = findViewById(R.id.tv_nama_Karaoke);
         tvtempat = findViewById(R.id.tv_tempat);
         tvdetail = findViewById(R.id.tv_detail_Karaoke);
-        tvnotelp = findViewById(R.id.tv_telp);
+        tvtekstelp = findViewById(R.id.tv_teks_telp);
+        tvnotelp = findViewById(R.id.tv_no_telp);
         ivfoto = findViewById(R.id.iv_foto);
         btnBukaLokasi = findViewById(R.id.btn_lokasi);
         btnBukaTelepon = findViewById(R.id.btn_telepon);

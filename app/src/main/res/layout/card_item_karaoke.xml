@@ -55,13 +55,30 @@
             android:id="@+id/tv_telp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/iv_foto_karaoke"
             android:layout_below="@+id/tv_tentang_Karaoke"
             android:layout_marginLeft="6dp"
-            android:text="Tentang Karaoke"
+            android:layout_toRightOf="@+id/iv_foto_karaoke"
+            android:ellipsize="end"
             android:justificationMode="inter_word"
             android:maxLines="4"
-            android:ellipsize="end"/>
+            android:text="Teks Telepon" />
+
+        <TextView
+            android:id="@+id/tv_notelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_telp"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/iv_foto_karaoke"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:maxLines="4"
+            android:text="Nomor Telepon" />
+
+
+
+
+
 
     </RelativeLayout>
 

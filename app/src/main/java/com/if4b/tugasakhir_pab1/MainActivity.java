@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 pindah.putExtra("xNama", data.getNama());
                 pindah.putExtra("xTempat",data.getTempat());
                 pindah.putExtra("xDetail", data.getDetail());
-                pindah.putExtra("xNoTelp",data.getNoTelp());
+                pindah.putExtra("xNoTelp", data.getNoTelp());
+                pindah.putExtra("xTeksTelp",data.getTeksTelp());
                 pindah.putExtra("xFoto",data.getFoto());
                 startActivity(pindah);
             }

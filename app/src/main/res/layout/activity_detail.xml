@@ -45,13 +45,23 @@
             android:justificationMode="inter_word"/>
 
         <TextView
-            android:id="@+id/tv_telp"
+            android:id="@+id/tv_teks_telp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No Telepon"
+            android:text="Telepon"
             android:padding="6dp"
             style="@style/TextAppearance.AppCompat.Medium"
             android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/tv_no_telp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nomor Telepon"
+            android:padding="6dp"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:justificationMode="inter_word"/>
+
 
         //Button
         <Button

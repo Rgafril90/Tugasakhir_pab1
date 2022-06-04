@@ -41,7 +41,8 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder
     holder.tvnamakaraoke.setText(karaoke.getNama());
     holder.tvtempat.setText(karaoke.getTempat());
     holder.tvdetailkaraoke.setText(karaoke.getDetail());
-    holder.tvtelp.setText(karaoke.getNoTelp());
+    holder.tvtekstelp.setText(karaoke.getTeksTelp());
+    holder.tvnotelp.setText(karaoke.getNoTelp());
 
     Glide
             .with(holder.itemView.getContext())
@@ -63,16 +64,16 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder
 
     public class CardViewHolder extends RecyclerView.ViewHolder {
         ImageView ivfototempatkaraoke;
-        TextView tvnamakaraoke,tvtempat, tvdetailkaraoke, tvtelp;
+        TextView tvnamakaraoke,tvtempat, tvdetailkaraoke, tvnotelp,tvtekstelp;
 
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
             ivfototempatkaraoke = itemView.findViewById(R.id.iv_foto_karaoke);
             tvnamakaraoke = itemView.findViewById(R.id.tv_nama_tempat_karaoke);
             tvdetailkaraoke = itemView.findViewById(R.id.tv_tentang_Karaoke);
+            tvnotelp = itemView.findViewById(R.id.tv_notelp);
+            tvtekstelp = itemView.findViewById(R.id.tv_telp);
             tvtempat = itemView.findViewById(R.id.tv_tempat);
-            tvtelp = itemView.findViewById(R.id.tv_telp);
-
         }
 
 
