@@ -61,7 +61,7 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String Telepon = tvnotelp.getText().toString();
-                Intent bukaTelepon = new Intent(Intent.ACTION_DIAL, Uri.fromParts("telp",Telepon, null));
+                Intent bukaTelepon = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel",Telepon, null));
                 startActivity(bukaTelepon);
             }
         });
