@@ -1,6 +1,6 @@
 package com.if4b.tugasakhir_pab1;
 
-public class ModelKaraoke {
+public class   ModelKaraoke {
     private String nama;
     private String detail;
     private String tempat;

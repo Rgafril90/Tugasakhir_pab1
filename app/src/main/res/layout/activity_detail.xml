@@ -44,9 +44,12 @@
             style="@style/TextAppearance.AppCompat.Medium"
             android:justificationMode="inter_word"/>
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_teks_telp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Telepon"
             android:padding="6dp"
@@ -55,12 +58,14 @@
 
         <TextView
             android:id="@+id/tv_no_telp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nomor Telepon"
+            android:layout_toRightOf="@id/tv_teks_telp"
+            android:text="Nomor"
             android:padding="6dp"
             style="@style/TextAppearance.AppCompat.Medium"
             android:justificationMode="inter_word"/>
+        </RelativeLayout>
 
 
         //Button
