@@ -1,6 +1,7 @@
 package com.if4b.tugasakhir_pab1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -13,9 +14,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 public class DetailActivity extends AppCompatActivity {
-    private TextView tvnama,tvtempat,tvdetail,tvtekstelp,tvnotelp;
+    private TextView tvnama,tvtempat,tvdetail,tvnotelp;
     private ImageView ivfoto;
-    private String yNama,yTempat,yDetail,yNotelp,yTeksTelp,yFoto;
+    private String yNama,yTempat,yDetail,yNotelp,yFoto;
 
     private Button btnBukaTelepon,btnBukaLokasi;
 
@@ -24,20 +25,28 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+//        toolbar edit back
+        Toolbar toolbar = findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         initView();
 
         Intent terima = getIntent();
         yNama = terima.getStringExtra("xNama");
         yTempat = terima.getStringExtra("xTempat");
         yDetail = terima.getStringExtra("xDetail");
-        yTeksTelp = terima.getStringExtra("xTeksTelp");
         yNotelp = terima.getStringExtra("xNoTelp");
         yFoto = terima.getStringExtra("xFoto");
 
         tvnama.setText(yNama);
         tvtempat.setText(yTempat);
         tvdetail.setText(yDetail);
-        tvtekstelp.setText(yTeksTelp);
         tvnotelp.setText(yNotelp);
 
 
@@ -72,7 +81,6 @@ public class DetailActivity extends AppCompatActivity {
         tvnama = findViewById(R.id.tv_nama_Karaoke);
         tvtempat = findViewById(R.id.tv_tempat);
         tvdetail = findViewById(R.id.tv_detail_Karaoke);
-        tvtekstelp = findViewById(R.id.tv_teks_telp);
         tvnotelp = findViewById(R.id.tv_no_telp);
         ivfoto = findViewById(R.id.iv_foto);
         btnBukaLokasi = findViewById(R.id.btn_lokasi);

@@ -6,11 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="6dp"
         android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/app_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+                    app:title="Detail"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
 
         <ImageView
             android:id="@+id/iv_foto"
@@ -47,14 +62,15 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tv_teks_telp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Telepon"
-            android:padding="6dp"
-            style="@style/TextAppearance.AppCompat.Medium"
-            android:justificationMode="inter_word"/>
+
+            <TextView
+                android:id="@+id/tv_teks_telp"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:padding="6dp"
+                android:text="Telepon : " />
 
         <TextView
             android:id="@+id/tv_no_telp"

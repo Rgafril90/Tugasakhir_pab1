@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         AdapterCard colokanCard = new AdapterCard(data);
         rvkaraoke.setAdapter(colokanCard);
 
-        colokanCard.setOnItemClickCallBack(new AdapterGrid.OnItemClickCallBack() {
+        colokanCard.setOnItemClickCallBack(new AdapterCard.OnItemClickCallBack() {
             @Override
             public void onItemClicked(ModelKaraoke data) {
                 Intent pindah = new Intent(MainActivity.this, DetailActivity.class);
@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 pindah.putExtra("xTempat",data.getTempat());
                 pindah.putExtra("xDetail", data.getDetail());
                 pindah.putExtra("xNoTelp", data.getNoTelp());
-                pindah.putExtra("xTeksTelp",data.getTeksTelp());
                 pindah.putExtra("xFoto",data.getFoto());
                 startActivity(pindah);
             }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimarydark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="splashtheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/logokaraoke</item>
+    </style>
+
+    <style name="toolbartex" parent="TextAppearance.MaterialComponents.Button">
+
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="Foxandroid.toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/white</item>
+        <item name="theme">@style/AppTheme</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/toolbartex</item>
+    </style>
+</resources>
