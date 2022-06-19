@@ -4,7 +4,6 @@ public class   ModelKaraoke {
     private String nama;
     private String detail;
     private String tempat;
-    private String tekstelp;
     private String noTelp;
     private String foto;
 
@@ -25,13 +24,6 @@ public class   ModelKaraoke {
     }
     public void setDetail(String detail) {
         this.detail = detail;
-    }
-
-    public String getTeksTelp() {
-        return tekstelp;
-    }
-    public void setTeksTelp(String teksTelp) {
-        this.tekstelp = teksTelp;
     }
 
     public String getNoTelp() {

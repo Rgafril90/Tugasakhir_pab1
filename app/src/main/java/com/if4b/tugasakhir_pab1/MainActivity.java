@@ -28,9 +28,7 @@ public class MainActivity extends AppCompatActivity {
         data.addAll(DataTempatKaraoke.ambilDataTempatKaraoke());
         tampilDataCard();
 
-        if(Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
+
     }
 
     private void tampilDataCard() {
@@ -51,18 +49,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    private void tampilDataGrid(){
-        rvkaraoke.setLayoutManager(new GridLayoutManager(this,2));
-        AdapterGrid colokanGrid = new AdapterGrid(data);
-        rvkaraoke.setAdapter(colokanGrid);
-
-        colokanGrid.setOnItemClickCallBack(new AdapterGrid.OnItemClickCallBack() {
-            @Override
-            public void onItemClicked(ModelKaraoke data) {
-                Toast.makeText(MainActivity.this, "Nama Tempat Karaoke" + data.getNama(), Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }

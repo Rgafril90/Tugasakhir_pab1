@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    tools:context=".DetailActivity"
+    android:background="@drawable/background1">
 
 
     <LinearLayout
@@ -89,13 +90,15 @@
             android:id="@+id/btn_telepon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
             android:text="Telepon"/>
 
         <Button
             android:id="@+id/btn_lokasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lokasi"/>
+            android:text="Lokasi"
+            android:backgroundTint="#4CAF50"/>
 
     </LinearLayout>
 
